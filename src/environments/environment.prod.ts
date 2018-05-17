@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  serverURL: 'https://stage.jinnilotto.com/',
+  // serverURL: './assets/',
 };
