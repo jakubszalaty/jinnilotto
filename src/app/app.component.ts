@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   draws$: Observable<Draw[]>;
   isLangDE = false;
+
   constructor(private lotteryService: LotteryService) {}
 
   ngOnInit(): void {

@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { OrderLotteryPipe } from './order-lottery.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, OrderLotteryPipe],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

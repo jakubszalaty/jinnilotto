@@ -2,18 +2,20 @@ Language: {{ isLangDE ? 'DE' : 'EN' }}
 <table>
   <thead>
     <tr>
-        <th>DrawID</th>
-        <th>LotteryName</th>
-        <th>Jackpot</th>
-        <th>Date</th>
+      <th>DrawID</th>
+      <th>LotteryName</th>
+      <th>Jackpot</th>
+      <th>Date</th>
+      <th>Jackpot</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let draw of draws$ | async">
+    <tr *ngFor="let draw of draws$ | async | orderLottery">
       <td>{{draw.DrawID}}</td>
       <td>{{draw.LotteryName}}</td>
-      <td>{{ isLangDE ? draw.jackpotAsStringRoundedDE : draw.jackpotAsStringRounded}}</td>
-      <td>{{ draw.DrawDate }} {{ draw.TimeZone }}</td>
+      <td>{{ isLangDE ? draw.jackpotAsStringRoundedDE : draw.jackpotAsStringRounded}} {{draw.currency}}</td>
+      <td>{{ draw.dateWithTimezone.date }}</td>
+      <td>{{ draw.Jackpot }}</td>
     </tr>
   </tbody>
 </table>
