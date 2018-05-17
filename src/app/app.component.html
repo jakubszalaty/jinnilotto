@@ -5,6 +5,7 @@ Language: {{ isLangDE ? 'DE' : 'EN' }}
         <th>DrawID</th>
         <th>LotteryName</th>
         <th>Jackpot</th>
+        <th>Date</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,7 @@ Language: {{ isLangDE ? 'DE' : 'EN' }}
       <td>{{draw.DrawID}}</td>
       <td>{{draw.LotteryName}}</td>
       <td>{{ isLangDE ? draw.jackpotAsStringRoundedDE : draw.jackpotAsStringRounded}}</td>
+      <td>{{ draw.DrawDate }} {{ draw.TimeZone }}</td>
     </tr>
   </tbody>
 </table>
